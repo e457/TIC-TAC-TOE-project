@@ -28,8 +28,6 @@ Epics included :
 
 Before I submitted the Tic-Tac-Toe MVP, I worked locally on my text editor to problem solve and bug fix. This helped with the distrubtion of the 3X3 grid. As I wanted to make sure the grid had efficient alignment with the size and grid spaces in-between. Moreover, the cognitive load would of been reduced as more bugs could be tracked. 
 
-Reflection on key design challenges, innovations and how they were solved (with examples).
-
 ##
 
 One key pre-design challenge was declaring the winner in the game. The winner function should accept a board as input, and return the winner of the board if there is one. If player 1 won the game, the function should return this result. This was developed using switch case statements of each grid square possbility.  
