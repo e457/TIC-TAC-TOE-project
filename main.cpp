@@ -24,7 +24,7 @@ public:
 			void displayBoard();
       void displayGridNo();
 			void retrieveLocation();
-			void checkLoaction();
+			void checkLocation();
 			void displayEntry();
 			int checkStatus();
 };
@@ -77,10 +77,44 @@ void game::displayBoard() // void function created to print the grid onto the co
 	cout << "\t|_____|_____|_____|" << endl << endl;
 }
 
-void game::retrieveLocation();{    // function to get entry location from players
+void game::retrieveLocation(){ 
 
 	cout<<"Player "<<playerNum<<" : ";
-	cin>>entry;
+	cin>>playerInput;
 	
 	checkLocation();
+}
+
+void game::checkLocation()  
+{
+	if(playerInput<1||playerInput>9)
+    {
+		cout<<"\nincorrect grid position. Try again!"<<endl;
+		retrieveLocation();
+	}
+	else 
+	{	
+    	if(gridAvailable[playerInput]!=0)
+    	{
+    		cout<<"\nincorrect grid position. Try again!"<<endl;
+			retrieveLocation();
+    	
+		}
+		else
+		{
+			gridAvailable[playerInput]=playerInput;
+			if(playerNum==1)
+   		    {
+		 	   playerNum=2;
+			   player=1;
+			   displayEntry();
+    		}
+    		else
+    		{
+   	   		  playerNum=1;
+			  player=2;
+			  displayEntry();
+    		}
+		}
+	}
 }
