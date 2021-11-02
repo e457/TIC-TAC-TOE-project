@@ -177,6 +177,7 @@ int game::checkStatus()
 			if (grid[0][0] == grid[0][1] && grid[0][0] == grid[0][2]&&grid[0][0]!=0)
 
 		return win;
+  
 	else if (grid[1][0] == grid[1][1] && grid[1][0] == grid[1][2]&&grid[1][0]!=0)
 
 	return win;
@@ -199,18 +200,19 @@ else	if (grid[0][0] == grid[1][1] && grid[0][0] == grid[2][2]&&grid[0][0]!=0)
 
 	return win;
 
-
-		int check=0;
+ //grid position - check for a draw
+ //start variable - to keep track off the grid square, if a player has taken a position 
+		int start=0;
 	
 	for(int i=0;i<3;i++){
 		for(int j=0;j<3;j++){
 		if(grid[i][j]!=0)
 		{
-			check+=1;
+			start+=1;
 		}
 	  }
 	}
-	  if(check==9)
+	  if(start==9)
 	  {
 	  	return draw;
 	  }
