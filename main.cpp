@@ -17,4 +17,14 @@ class game
       int player_num; 
       int gridAvailable[9];
       int playerInput;
+
+//functions list
+public:
+			game(); 
+			void displayBoard();
+      void displayGridNo();
+			void retrieveLocation();
+			void checkLoaction();
+			void displayEntry();
+			int checkStatus();
 };
