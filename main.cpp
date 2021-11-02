@@ -8,7 +8,6 @@ using namespace std;
  
 //variables and their data structures contained within a class
 
-
 class game
 {
 	private:
@@ -18,7 +17,6 @@ class game
       int gridAvailable[9];
       int playerInput;
 
-//functions list
 public:
 			game(); 
 			void displayBoard();
