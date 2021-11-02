@@ -28,3 +28,30 @@ public:
 			void displayEntry();
 			int checkStatus();
 };
+
+game::game()  
+{
+	displayGridNo();
+	displayBoard();
+  retrieveLocation() ;
+}
+
+void game::displayGridNo()
+{
+  cout<<"\nWelcome to Tic-Tac-Toe...Players take turns making one mark in an empty spot on the playing grid with each play until one of them wins or a tie occurs."<<endl;
+	cout<<"\nWhich Player are you"<<endl;
+  cout<<"Player 1 or Player 2 :"<<endl;
+	cin>>player_num;	
+	
+	for(int i=0;i<3;i++){
+		for(int x=0;x<3;x++){
+			
+		grid[i][x]=0;
+	
+	  }
+	}
+	for(int i=0;i<9;i++)
+	{
+	   gridAvailable[i]=0;	
+	}		
+}
