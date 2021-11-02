@@ -41,7 +41,7 @@ game::game()
 void game::displayGridNo()
 {
   cout<<"\nWelcome to Tic-Tac-Toe...Players take turns making one mark in an empty spot on the playing grid with each play until one of them wins or a tie occurs."<<endl;
-	cout<<"\nTo play enter 1 for player 1 or 2 for player 2"<<endl;
+	cout<<"\nInstructions"<<endl;cout<<"Enter 1 for player 1 or 2 for player 2"<<endl;
   cout<<"Player 1 or Player 2 :"<<endl;
 	cin>>playerNum;	
 	
@@ -89,7 +89,7 @@ void game::checkLocation()
 {
 	if(playerInput<1||playerInput>9)
     {
-		cout<<"\nincorrect grid position. Try again!"<<endl;
+		cout<<"\nEnter the correct value, please!"<<endl;
 		retrieveLocation();
 	}
 	else 
@@ -156,21 +156,16 @@ void game ::displayEntry()
      switch(checkStatus())
 	{
 	   case 0:  
-	   			
-		    	system("CLS");
 		    	displayBoard();
 		    	retrieveLocation();
 		    	break;
 		case 1:
-			
-				system("CLS");   
-		    	displayBoard();
+		    displayBoard();
 				cout<<"\nPlayer "<<player<<" wins!"<<endl;
 				break;
+
 		case 2: 
-				
-				system("CLS");   
-		    	displayBoard();
+		    displayBoard();
 				cout<<"\nDRAW!"<<endl;
 				break;	
 	}
@@ -205,3 +200,42 @@ else	if (grid[0][0] == grid[1][1] && grid[0][0] == grid[2][2]&&grid[0][0]!=0)
 	else if (grid[0][2] ==grid[1][1] && grid[0][2] == grid[2][0]&&grid[0][2]!=0)
 
 	return win;
+
+
+		int check=0;
+	
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+		if(grid[i][j]!=0)
+		{
+			check+=1;
+		}
+	  }
+	}
+	  if(check==9)
+	  {
+	  	return draw;
+	  }
+	else
+	{
+
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+		if(grid[i][j]==0)
+		{
+			return Continue;
+		}
+	   }
+	 }
+    }
+}
+int main()
+{
+	
+	game game;
+
+	return 0;
+
+}
+
+
