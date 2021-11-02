@@ -229,7 +229,7 @@ else	if (grid[0][0] == grid[1][1] && grid[0][0] == grid[2][2]&&grid[0][0]!=0)
 	 }
     }
 }
-int main()
+int main() //execute the programme
 {
 	
 	game game;
