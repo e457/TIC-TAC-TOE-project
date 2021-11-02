@@ -175,3 +175,33 @@ void game ::displayEntry()
 				break;	
 	}
 }
+int game::checkStatus()
+{
+	int Continue=0;
+  int win=1;
+  int draw=2;
+		
+			if (grid[0][0] == grid[0][1] && grid[0][0] == grid[0][2]&&grid[0][0]!=0)
+
+		return win;
+	else if (grid[1][0] == grid[1][1] && grid[1][0] == grid[1][2]&&grid[1][0]!=0)
+
+	return win;
+else	if (grid[2][0] == grid[2][1] && grid[2][0] == grid[2][2]&&grid[2][0]!=0)
+
+		return win;
+	else if (grid[0][0] ==grid[1][0] && grid[0][0] == grid[2][0]&&grid[0][0]!=0)
+
+	return win;
+else	if  (grid[0][1] ==grid[1][1] && grid[0][1] == grid[2][1]&&grid[0][1]!=0)
+
+		return win;
+	else if (grid[0][2] ==grid[1][2] && grid[0][2] == grid[2][2]&&grid[0][2]!=0)
+
+	return win;
+else	if (grid[0][0] == grid[1][1] && grid[0][0] == grid[2][2]&&grid[0][0]!=0)
+
+		return win;
+	else if (grid[0][2] ==grid[1][1] && grid[0][2] == grid[2][0]&&grid[0][2]!=0)
+
+	return win;
