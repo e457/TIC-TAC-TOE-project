@@ -7,3 +7,14 @@ using namespace std;
 
  
 //variable and their data structures contained within a class
+
+
+class game
+{
+	private:
+			int grid[3][3];//3x3 grid   
+			int player; 
+      int player_num; 
+      int gridAvailable[9];
+      int playerInput;
+};
