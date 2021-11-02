@@ -14,7 +14,7 @@ class game
 	private:
 			int grid[3][3];//3x3 grid   
 			int player; 
-      int player_num; 
+      int playerNum; 
       int gridAvailable[9];
       int playerInput;
 
@@ -29,6 +29,8 @@ public:
 			int checkStatus();
 };
 
+//functions use defined later in the programme
+
 game::game()  
 {
 	displayGridNo();
@@ -39,7 +41,7 @@ game::game()
 void game::displayGridNo()
 {
   cout<<"\nWelcome to Tic-Tac-Toe...Players take turns making one mark in an empty spot on the playing grid with each play until one of them wins or a tie occurs."<<endl;
-	cout<<"\nWhich Player are you"<<endl;
+	cout<<"\nTo play enter 1 for player 1 or 2 for player 2"<<endl;
   cout<<"Player 1 or Player 2 :"<<endl;
 	cin>>player_num;	
 	
@@ -54,4 +56,32 @@ void game::displayGridNo()
 	{
 	   gridAvailable[i]=0;	
 	}		
+}
+
+void game::displayBoard() // void function created to print the grid onto the console
+{//hard-coded grid display 
+	cout << "\t _________________" << endl;
+	cout << "\t|     |     |     |" << endl;
+	cout << "\t|  " << grid[0][0] << "  |  " <<grid[0][1]<< "  |  " << grid[0][2] <<"  |" << endl;
+
+	cout << "\t|_____|_____|_____|" << endl;
+	cout << "\t|     |     |     |" << endl;
+
+	cout << "\t|  " << grid[1][0] << "  |  " <<grid[1][1]<< "  |  " << grid[1][2]<<"  |" << endl;
+
+	cout << "\t|_____|_____|_____|" << endl;
+	cout << "\t|     |     |     |" << endl;
+
+	cout << "\t|  " <<grid[2][0] << "  |  " <<grid[2][1] << "  |  " <<grid[2][2] <<"  |" << endl;
+
+	cout << "\t|_____|_____|_____|" << endl << endl;
+}
+
+void game::retrieveLocation();    // function to get entry location from players
+{
+	cout<<"Player "<<playerNum<<" : ";
+	cin>>entry;
+	
+	checkLocation();
+	 
 }
