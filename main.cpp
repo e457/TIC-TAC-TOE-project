@@ -43,7 +43,7 @@ void game::displayGridNo()
   cout<<"\nWelcome to Tic-Tac-Toe...Players take turns making one mark in an empty spot on the playing grid with each play until one of them wins or a tie occurs."<<endl;
 	cout<<"\nTo play enter 1 for player 1 or 2 for player 2"<<endl;
   cout<<"Player 1 or Player 2 :"<<endl;
-	cin>>player_num;	
+	cin>>playerNum;	
 	
 	for(int i=0;i<3;i++){
 		for(int x=0;x<3;x++){
@@ -77,11 +77,10 @@ void game::displayBoard() // void function created to print the grid onto the co
 	cout << "\t|_____|_____|_____|" << endl << endl;
 }
 
-void game::retrieveLocation();    // function to get entry location from players
-{
+void game::retrieveLocation();{    // function to get entry location from players
+
 	cout<<"Player "<<playerNum<<" : ";
 	cin>>entry;
 	
 	checkLocation();
-	 
 }
