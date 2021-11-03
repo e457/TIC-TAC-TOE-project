@@ -10,7 +10,7 @@ Afterward, the 3X3 board would be seen in the console, each square has a number.
  As C++ was used, cout displayed the grid to the console. Then the game would allow one player to take part first. Then the second player takes their turn. This was developed with a loop.
  
   
-If there are 3 spaces on the grid (vertical, horizontal or diagonal) taken up by player 1 then the program would declare player 1 as the winner. However, if there is a tie, then there is no loser. Moreover, to keep track of a grid position conditions were crucial to include. This can be seen with the switch statement and if/else statements. For example, 
+If there are 3 spaces on the grid (vertical, horizontal or diagonal) taken up by player 1 then the program would declare player 1 as the winner. However, if there is a tie, then there is no loser. Moreover, to keep track of a grid position conditions were crucial to include. This can be seen with the switch statement and if/else statements.  
 
 
 
