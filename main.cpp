@@ -85,7 +85,6 @@ void game::retrieveLocation(){
 
 
 
-
 void game::checkLocation()  
 {
 	if(playerInput<1||playerInput>9)
@@ -119,6 +118,10 @@ void game::checkLocation()
 		}
 	}
 }
+
+
+
+
 
 
 void game ::displayEntry()

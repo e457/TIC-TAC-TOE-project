@@ -37,6 +37,10 @@ One key pre-design challenge was declaring the winner in the game. The winner fu
 
 Moreover, I became famailar with code smells and code refactoring. An example of code refactoring would be rewriting of objects from lines 15 instead of creating header files for each object, I preferred to visualise the class members in one file. As a result, I did not have to jump between different files for the objects instantiated by the classes code this produced efficiency. Furthermore, I had an initial step of stating the variables but instead thought that including a class with objects had a better approach with OOP. 
 
+##
+
+
+
 ## OOP Principles 
 
 - Encapsulation 
@@ -46,5 +50,7 @@ Due to the class members being declared as only being accessed by the functions 
 
 ## Reflective review
 
- The opportunity to improve development with this project would be to include an AI feature e.g. player vs computer. During the early testing stages, more bugs arose from this feature. In particular, a bug consitied of displaying the wrong 'winner' in the game. As a result, the project would be less credible to include this feature. 
+ The opportunity to improve development with this project would be to include an AI feature e.g. player vs computer. During the early testing stages, more bugs arose from this feature. In particular, a bug consisted of displaying the wrong 'winner' in the game. As a result, the project would be less credible to include this feature. 
+
+ Moreover, for an OOP-based project the best feature to include was encapsulation. However,there are three other principles including abstraction, inheritance, and Polymorphism that would make this a pure OOP project. For example, with inheritance the code could include the ability for one object e.g. the noughts to take on the states, behaviors, and functionality of the crosses to provide code re-usability. 
 
