@@ -62,7 +62,7 @@ void game::displayBoard() // void function created to print the grid onto the co
 	cout << "\t|     |     |     |" << endl;
 	cout << "\t|  " << grid[0][0] << "  |  " <<grid[0][1]<< "  |  " << grid[0][2] <<"  |" << endl;
 
-	cout << "\t|_____|_____|_____|" << endl;
+	cout << "\t|_____|_____|_____|" <<endl;
 	cout << "\t|     |     |     |" << endl;
 
 	cout << "\t|  " << grid[1][0] << "  |  " <<grid[1][1]<< "  |  " << grid[1][2]<<"  |" << endl;
@@ -72,9 +72,9 @@ void game::displayBoard() // void function created to print the grid onto the co
 
 	cout << "\t|  " <<grid[2][0] << "  |  " <<grid[2][1] << "  |  " <<grid[2][2] <<"  |" << endl;
 
-	cout << "\t|_____|_____|_____|" << endl << endl;
-}
+	cout << "\t|_____|_____|_____|" << endl;
 
+}
 void game::retrieveLocation(){ 
 
 	cout<<"Player "<<playerNum<<" : ";
@@ -83,11 +83,14 @@ void game::retrieveLocation(){
 	checkLocation();
 }
 
+
+
+
 void game::checkLocation()  
 {
 	if(playerInput<1||playerInput>9)
     {
-		cout<<"\nEnter the correct value, please!"<<endl;
+		std::cout<<"\nEnter the correct value, please!"<<endl;
 		retrieveLocation();
 	}
 	else 
@@ -116,6 +119,7 @@ void game::checkLocation()
 		}
 	}
 }
+
 
 void game ::displayEntry()
 {
@@ -164,7 +168,7 @@ void game ::displayEntry()
 
 		case 2: 
 		    displayBoard();
-				cout<<"\nDRAW!"<<endl;
+				cout<<"\nDRAW! "<<endl;
 				break;	
 	}
 }
